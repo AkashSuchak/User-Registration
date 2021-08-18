@@ -68,18 +68,19 @@ namespace UserRegistration
         public void Password()
         {
             //Constant
-            const string REGEX_PASSWORD = "^(?=.*[a-z0-9A-Z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+            const string REGEX_PASSWORD = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[~`!@#$%^&*_+=,./?]).{8,}$";
                         
             Console.WriteLine("NOTE : Password Rule 1 --> Minimum 8 Characters");
             Console.WriteLine("       Password Rule 2 --> Atleast 1 Upper Case");
             Console.WriteLine("       Password Rule 3 --> Atleast 1 Numeric Number");
-            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine("       Password Rule 4 --> Atleast 1 Special Character");
+            Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("Enter Your Password : ");
 
             //Take User Input
             string password = Console.ReadLine();
 
-            //Validation
+            //Validation an Display
             if (Regex.IsMatch(password, REGEX_PASSWORD) == true)
             {
                 Console.WriteLine("Valid Password. ");
