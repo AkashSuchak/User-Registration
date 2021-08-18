@@ -31,10 +31,10 @@ namespace UserRegistration
         public void Email()
         {
             //Constant
-            const string Regex_EmailId = "^[A-Za-z0-9]+([.+-_][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][A-Za-z]+([.][A-Za-z]+)?$";            
+            const string REGEX_EMAIL_ID = "^[A-Za-z0-9]+([.+-_][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][A-Za-z]+([.][A-Za-z]+)?$";            
             string email = Console.ReadLine();
 
-            if (Regex.IsMatch(email, Regex_EmailId) == true)
+            if (Regex.IsMatch(email, REGEX_EMAIL_ID) == true)
             {
                 Console.WriteLine("Entered Email-Id is Valid");
             }
@@ -43,6 +43,27 @@ namespace UserRegistration
                 Console.WriteLine("Invalid Email-ID. Try Again!!!");
                 Email();
             }
+        }
+        public void MobileNumber()
+        {
+            //Constant
+            const string REGEX_MOBILE_NUMBER = "^[1-9]{1,2}[ ][1-9]{1}[0-9]{9}$";
+            Console.WriteLine("Example :: 91 9876543210 :: ");
+            
+            //Take Input from User
+            string mobile = Console.ReadLine();
+
+            //validation
+            if (Regex.IsMatch(mobile, REGEX_MOBILE_NUMBER) == true)
+            {
+                Console.WriteLine("Entered Mobile number is Valid. ");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Mobile Number. Try Again !!!");
+                MobileNumber();
+            }
+
         }
     }
 }
