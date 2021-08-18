@@ -24,9 +24,13 @@ namespace UserRegistration
             Console.WriteLine("Enter your Email-Id : ");
             validation.Email();
             Console.WriteLine("------------------------");            
-            */
+            
             Console.WriteLine("Enter your Mobile Number : ");
             validation.MobileNumber();
+            Console.WriteLine("------------------------");
+            */
+            Console.WriteLine("Enter password : ");
+            validation.Password();
             Console.WriteLine("------------------------");
         }
     }

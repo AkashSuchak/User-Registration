@@ -65,5 +65,25 @@ namespace UserRegistration
             }
 
         }
+        public void Password()
+        {
+            //Constant
+            const string REGEX_PASSWORD = "^[a-zA-Z0-9_!-+@#$]{8,}$";
+            Console.WriteLine("NOTE : Password Rule 1 --> Minimum 8 Characters");            
+            
+            //Take User Input
+            string password = Console.ReadLine();
+
+            //Validation
+            if (Regex.IsMatch(password, REGEX_PASSWORD) == true)
+            {
+                Console.WriteLine("Valid Password. ");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Password. Try AGain !!!");
+                Password();
+            }
+        }
     }
 }
