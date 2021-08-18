@@ -6,26 +6,26 @@ namespace UserRegistration
 {
     class Validation
     {
-        public void FirstName()
+        public void FirstAndLastName()
         {
             //Variables
-            string firstName;
+            string firstAndLastName;
             const string REGEX_NAME = "^[A-Z]{1}[A-Za-z]{2,}";
             
             //Display NOTE            
-            Console.WriteLine("NOTE : First name start with Capital and has Minimum 3 characters : ");
-            Console.Write("Enter Your First name : ");
-            firstName = Console.ReadLine();
+            Console.WriteLine("NOTE : Name start with Capital and has Minimum 3 characters : ");
+            
+            firstAndLastName = Console.ReadLine();
             
             //Validation
-            if (Regex.IsMatch(firstName, REGEX_NAME) == true)
+            if (Regex.IsMatch(firstAndLastName, REGEX_NAME) == true)
             {
-                Console.WriteLine("Entered First Name is Valid ");
+                Console.WriteLine("Entered Name is Valid ");
             }
             else
             {
                 Console.WriteLine("Invalid Input. Try Again!!!");
-                FirstName();
+                FirstAndLastName();
             }
         }
     }
