@@ -12,11 +12,17 @@ namespace UserRegistration
 
             //Call Validation Class
             Validation validation = new Validation();
-            Console.WriteLine("Enter Your First Name : ");
+
+            /*Console.WriteLine("Enter Your First Name : ");
             validation.FirstAndLastName();//FirstName
             Console.WriteLine("------------------------");
+            
             Console.WriteLine("Enter Your Last Name : ");
-            validation.FirstAndLastName();//LastName
+            validation.FirstAndLastName();//LastName            
+            Console.WriteLine("------------------------");            
+            */
+            Console.WriteLine("Enter your Email-Id : ");
+            validation.Email();
         }
     }
 }
