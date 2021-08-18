@@ -29,7 +29,7 @@ namespace UserRegistration
             validation.MobileNumber();
             Console.WriteLine("------------------------");
             */
-            Console.WriteLine("Enter password : ");
+            
             validation.Password();
             Console.WriteLine("------------------------");
         }
