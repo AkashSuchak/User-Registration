@@ -30,19 +30,28 @@ namespace UserRegistration
         }
         public void Email()
         {
-            //Constant
-            const string REGEX_EMAIL_ID = "^[A-Za-z0-9]+([.+-_][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][A-Za-z]+([.][A-Za-z]+)?$";            
-            string email = Console.ReadLine();
-
-            if (Regex.IsMatch(email, REGEX_EMAIL_ID) == true)
+            //Constant            
+            const string REGEX_EMAIL_ID = @"^[A-Za-z0-9]+([\.+\-_][A-Za-z0-9]+)*@[a-zA-Z0-9]+\.?[A-Za-z]+\.?[A-Za-z]{2,}$";
+            string[] email = new string[] {
+            "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net",
+            "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com", "abc","abc@.com.my",
+            "abc123@gmail.a", "abc123@.com", "abc123@.com.com", ".abc@abc.com", "abc()*@gmail.com",
+            "abc@%*.com", "abc..2002@gmail.com", "abc.@gmail.com", "abc@abc@gmail.com", "abc@gmail.com.1a",
+            "abc@gmail.com.aa.au"
+            };
+            for (int i = 0; i < email.Length; i++)
             {
-                Console.WriteLine("Entered Email-Id is Valid");
+                if (Regex.IsMatch(email[i], REGEX_EMAIL_ID) == true)
+                {
+                    Console.WriteLine("Valid : {0}", email[i]);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid : {0}", email[i]);
+                    //Email();
+                }
             }
-            else
-            {
-                Console.WriteLine("Invalid Email-ID. Try Again!!!");
-                Email();
-            }
+            
         }
         public void MobileNumber()
         {

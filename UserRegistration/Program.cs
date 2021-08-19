@@ -20,18 +20,18 @@ namespace UserRegistration
             Console.WriteLine("Enter Your Last Name : ");
             validation.FirstAndLastName();//LastName            
             Console.WriteLine("------------------------");            
-            
-            Console.WriteLine("Enter your Email-Id : ");
+            */
+            //Console.WriteLine("Enter your Email-Id : ");
             validation.Email();
             Console.WriteLine("------------------------");            
-            
+            /*
             Console.WriteLine("Enter your Mobile Number : ");
             validation.MobileNumber();
             Console.WriteLine("------------------------");
-            */
+            
             
             validation.Password();
-            Console.WriteLine("------------------------");
+            Console.WriteLine("------------------------");*/
         }
     }
 }
